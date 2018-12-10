@@ -1,0 +1,38 @@
+import java.awt.*;
+import java.applet.*;
+
+public class Utility{
+
+   public static int Random(int Upper, int Lower) {
+      return (int)(Math.random() * (Upper - Lower) + Lower);
+    }
+   
+   public static double find_Distance(int x1, int y1, int x2, int y2) {
+      return Math.pow(((double)Math.pow((x2 - x1), 2) + (double)Math.pow((y2 - y1), 2)),0.5);
+   }
+   
+   private static double do_QF_Add(double a, double b, double c) {
+      return (double)((-b + Math.pow((Math.pow(b, 2) - 4*a*c), 0.5))/(2*a));
+   }
+      
+   private static double do_QF_Sub(double a, double b, double c) {
+      return (double)((-b - Math.pow((Math.pow(b, 2) - 4*a*c), 0.5))/(2*a));
+   }
+   
+   public static void check_Sign(double x) {
+      String output = "";
+      if (x < 0)
+         output = " - ";
+      if (x > 0)
+         output = " + ";
+      System.out.print(output);
+   }
+   
+   public static void do_QF(double a, double b, double c) {
+      System.out.print("( x");
+      check_Sign(-do_QF_Add(a,b,c));
+      System.out.print(Math.abs(do_QF_Add(a,b,c)) + " )( x");
+      check_Sign(-do_QF_Sub(a,b,c));
+      System.out.print(Math.abs(do_QF_Sub(a,b,c)) + " )\n");
+   }
+}
