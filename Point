@@ -1,0 +1,25 @@
+public class Point 
+{
+    private int xP;
+    private int yP;
+    
+    public Point () 
+    {
+        xP = 0;
+        yP = 0;
+    }
+
+    public Point (int x, int y)
+    {
+        xP = x;
+        yP = y;
+    }
+
+    public int getX ()      {return this.xP;}
+
+    public int getY ()      {return this.yP;}
+    
+    public void setX (int x) {xP = x;}
+    
+    public void getX (int y) {yP = y;}
+}
