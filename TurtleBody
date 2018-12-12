@@ -1,0 +1,31 @@
+import java.util.*;
+import java.awt.*;
+import java.applet.*;
+
+/**
+ * Write a description of class TurtleBody here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class TurtleBody
+{
+    private Point startXY;
+    private int bodyWidth;
+    private int bodyLength;
+    
+    public TurtleBody(Point sXY, int bW, int bL)
+    {
+     startXY = sXY;
+     bodyWidth = bW;
+     bodyLength = bL;
+        
+    }
+    
+    public void drawTurtleBody(Graphics g)
+    {
+        g.setColor(new Color(0,102,0));
+        g.fillOval(startXY.getX(), startXY.getY(), bodyWidth, bodyLength);
+    }
+    
+}
