@@ -15,9 +15,9 @@ public class Point
         yP = y;
     }
 
-    public int getX ()      {return this.xP;}
+    public int  getX ()      {return this.xP;}
 
-    public int getY ()      {return this.yP;}
+    public int  getY ()      {return this.yP;}
     
     public void setX (int x) {xP = x;}
     
