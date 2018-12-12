@@ -1,0 +1,17 @@
+import java.awt.*;  
+
+public class Background
+{
+    private Point p;
+    
+    public Background (Graphics g)
+    {
+        for (int i = 0; i < 10000; i++)
+        {
+            p = new Point(Utility.Random(1920,-50), Utility.Random(1080,-50));
+            int c_rand = Utility.Random(50,0);
+            g.setColor(new Color(0, Utility.Random(220,150), 255, Utility.Random(255,150)));
+            g.fillOval(p.getX(),p.getY(),c_rand,c_rand);
+        }    
+    }
+}
