@@ -1,0 +1,51 @@
+import java.applet.Applet; 
+import java.awt.*; 
+import java.awt.event.*; 
+import java.awt.Color; 
+import java.awt.Graphics; 
+import javax.swing.*; 
+import java.awt.geom.*; 
+import java.awt.image.*; 
+
+public class JellyMain
+{
+    private int startX;
+    private int startY;
+    private int width;
+    private int height;
+    
+    
+    
+    
+    public JellyMain()
+    {
+        startX = 0;
+        startY = 0;
+    }
+    
+    public JellyMain(int sX, int sY, int width, int height)
+    {
+        startX = sX;
+        startY = sY;
+        this.width = width;
+        this.height = height;
+    }
+    
+    public void drawJelly(Graphics g)
+    {
+        g.setColor(Color.pink);
+        g.fillArc(startX, startY, width, height, 0, 180);
+        
+      
+    }
+    
+    //Make sure to make this its own class
+    public void drawJellyStrings(Graphics2D g2)
+    {
+        // create new CubicCurve2D.Double
+        CubicCurve2D c = new CubicCurve2D.Double();
+        // draw CubicCurve2D.Double with set coordinates (x1,y1, cX1, cY1, cX2, cY2, x2, y2)
+        c.setCurve(50, 50, 75, 50, 50, 75, 100, 100);
+           g2.draw(c);
+    }
+}
