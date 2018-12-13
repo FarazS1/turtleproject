@@ -1,0 +1,28 @@
+import java.awt.*;
+import java.applet.*;
+
+public class Bubble
+{
+    private Point p;
+    private Color c;
+    private int s;
+    
+    public Bubble()
+    {
+        p = new Point(Utility.Random(1920,-50), Utility.Random(1080,-50));
+        s = Utility.Random(50,0);
+        c = new Color(0, Utility.Random(220,150), 255, Utility.Random(200,100));
+    }
+    
+    public void drawBubble(Graphics g)  {g.setColor(c); g.fillOval(p.getX(),p.getY(),s,s);}
+    
+    public int  getOX()                 {return p.getX();}
+    
+    public int  getOY()                 {return p.getY();}
+    
+    public void setOX(int x)            {p.setX(x);}
+     
+    public void setOY(int y)            {p.setY(y);}
+    
+    public void bubbleErase(Graphics g) {g.setColor(Color.white);}
+}
